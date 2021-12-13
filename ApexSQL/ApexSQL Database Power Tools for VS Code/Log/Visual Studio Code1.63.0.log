@@ -1,0 +1,402 @@
+2021-12-10 10:02:02.998 INFO  [VSCPWRTOOLS: 2021.1.81.0]: OS version: Linux 4.15.0-161-generic #169-Ubuntu SMP Fri Oct 15 13:41:54 UTC 2021
+2021-12-10 10:02:02.999 INFO  [VSCPWRTOOLS: 2021.1.81.0]: Host application: Visual Studio Code(1.63.0)
+2021-12-10 10:02:02.999 INFO  [VSCPWRTOOLS: 2021.1.81.0]: Initializing addin: ApexSQL Database Power Tools for VS Code 2021.1.81.0
+2021-12-10 10:02:03.010 ERROR : An exception occurred
+Could not find file '/home/tdiuco/documents/finalPresentation/project-tsdiuco/ApexSQL/Common/QuestId.xml'.
+Type: System.IO.FileNotFoundException
+	Stack trace
+	   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+	   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+	   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+	   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+	   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+	   at System.IO.StreamReader..ctor(String path)
+	   at ApexSQL.Common.QuestID.QuestIDController.LoadToken()
+
+2021-12-10 10:02:03.010 ERROR : An exception occurred
+Could not find file '/home/tdiuco/documents/finalPresentation/project-tsdiuco/ApexSQL/Common/QuestId.xml'.
+Type: System.IO.FileNotFoundException
+	Stack trace
+	   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+	   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+	   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+	   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+	   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+	   at System.IO.StreamReader..ctor(String path)
+	   at ApexSQL.Common.QuestID.QuestIDController.LoadToken()
+
+2021-12-10 10:02:03.011 ERROR : An exception occurred
+Could not find file '/home/tdiuco/documents/finalPresentation/project-tsdiuco/ApexSQL/Common/QuestId.xml'.
+Type: System.IO.FileNotFoundException
+	Stack trace
+	   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+	   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+	   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+	   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+	   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+	   at System.IO.StreamReader..ctor(String path)
+	   at ApexSQL.Common.QuestID.QuestIDController.LoadToken()
+
+2021-12-10 10:02:03.013 ERROR : An exception occurred
+Could not find file '/home/tdiuco/documents/finalPresentation/project-tsdiuco/ApexSQL/Common/QuestId.xml'.
+Type: System.IO.FileNotFoundException
+	Stack trace
+	   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+	   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+	   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+	   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+	   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+	   at System.IO.StreamReader..ctor(String path)
+	   at ApexSQL.Common.QuestID.QuestIDController.LoadToken()
+
+2021-12-10 10:02:03.013 ERROR : An exception occurred
+Could not find file '/home/tdiuco/documents/finalPresentation/project-tsdiuco/ApexSQL/Common/QuestId.xml'.
+Type: System.IO.FileNotFoundException
+	Stack trace
+	   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+	   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+	   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+	   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+	   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+	   at System.IO.StreamReader..ctor(String path)
+	   at ApexSQL.Common.QuestID.QuestIDController.LoadToken()
+
+2021-12-10 10:02:03.014 ERROR : An exception occurred
+Could not find file '/home/tdiuco/documents/finalPresentation/project-tsdiuco/ApexSQL/Common/QuestId.xml'.
+Type: System.IO.FileNotFoundException
+	Stack trace
+	   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+	   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+	   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+	   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+	   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+	   at System.IO.StreamReader..ctor(String path)
+	   at ApexSQL.Common.QuestID.QuestIDController.LoadToken()
+
+2021-12-10 10:02:03.014 ERROR : An exception occurred
+Could not find file '/home/tdiuco/documents/finalPresentation/project-tsdiuco/ApexSQL/Common/QuestId.xml'.
+Type: System.IO.FileNotFoundException
+	Stack trace
+	   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+	   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+	   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+	   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+	   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+	   at System.IO.StreamReader..ctor(String path)
+	   at ApexSQL.Common.QuestID.QuestIDController.LoadToken()
+
+2021-12-10 10:02:03.015 ERROR : An exception occurred
+Could not find file '/home/tdiuco/documents/finalPresentation/project-tsdiuco/ApexSQL/Common/QuestId.xml'.
+Type: System.IO.FileNotFoundException
+	Stack trace
+	   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+	   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+	   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+	   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+	   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+	   at System.IO.StreamReader..ctor(String path)
+	   at ApexSQL.Common.QuestID.QuestIDController.LoadToken()
+
+2021-12-10 10:02:03.015 ERROR : An exception occurred
+Could not find file '/home/tdiuco/documents/finalPresentation/project-tsdiuco/ApexSQL/Common/QuestId.xml'.
+Type: System.IO.FileNotFoundException
+	Stack trace
+	   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+	   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+	   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+	   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+	   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+	   at System.IO.StreamReader..ctor(String path)
+	   at ApexSQL.Common.QuestID.QuestIDController.LoadToken()
+
+2021-12-10 10:02:03.039 ERROR : An exception occurred
+Could not find file '/home/tdiuco/documents/finalPresentation/project-tsdiuco/ApexSQL/Common/QuestId.xml'.
+Type: System.IO.FileNotFoundException
+	Stack trace
+	   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+	   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+	   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+	   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+	   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+	   at System.IO.StreamReader..ctor(String path)
+	   at ApexSQL.Common.QuestID.QuestIDController.LoadToken()
+
+2021-12-10 10:02:03.040 ERROR : An exception occurred
+Could not find file '/home/tdiuco/documents/finalPresentation/project-tsdiuco/ApexSQL/Common/QuestId.xml'.
+Type: System.IO.FileNotFoundException
+	Stack trace
+	   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+	   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+	   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+	   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+	   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+	   at System.IO.StreamReader..ctor(String path)
+	   at ApexSQL.Common.QuestID.QuestIDController.LoadToken()
+
+2021-12-10 10:31:14.817 ERROR : An exception occurred
+Could not find file '/home/tdiuco/documents/finalPresentation/project-tsdiuco/ApexSQL/Common/QuestId.xml'.
+Type: System.IO.FileNotFoundException
+	Stack trace
+	   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+	   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+	   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+	   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+	   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+	   at System.IO.StreamReader..ctor(String path)
+	   at ApexSQL.Common.QuestID.QuestIDController.LoadToken()
+
+2021-12-10 10:31:14.817 ERROR : An exception occurred
+Could not find file '/home/tdiuco/documents/finalPresentation/project-tsdiuco/ApexSQL/Common/QuestId.xml'.
+Type: System.IO.FileNotFoundException
+	Stack trace
+	   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+	   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+	   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+	   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+	   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+	   at System.IO.StreamReader..ctor(String path)
+	   at ApexSQL.Common.QuestID.QuestIDController.LoadToken()
+
+2021-12-10 10:31:14.821 ERROR : An exception occurred
+Could not find file '/home/tdiuco/documents/finalPresentation/project-tsdiuco/ApexSQL/Common/QuestId.xml'.
+Type: System.IO.FileNotFoundException
+	Stack trace
+	   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+	   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+	   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+	   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+	   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+	   at System.IO.StreamReader..ctor(String path)
+	   at ApexSQL.Common.QuestID.QuestIDController.LoadToken()
+
+2021-12-10 10:31:14.822 ERROR : An exception occurred
+Could not find file '/home/tdiuco/documents/finalPresentation/project-tsdiuco/ApexSQL/Common/QuestId.xml'.
+Type: System.IO.FileNotFoundException
+	Stack trace
+	   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+	   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+	   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+	   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+	   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+	   at System.IO.StreamReader..ctor(String path)
+	   at ApexSQL.Common.QuestID.QuestIDController.LoadToken()
+
+2021-12-10 10:31:14.863 ERROR : An exception occurred
+Could not find file '/home/tdiuco/documents/finalPresentation/project-tsdiuco/ApexSQL/Common/QuestId.xml'.
+Type: System.IO.FileNotFoundException
+	Stack trace
+	   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+	   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+	   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+	   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+	   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+	   at System.IO.StreamReader..ctor(String path)
+	   at ApexSQL.Common.QuestID.QuestIDController.LoadToken()
+
+2021-12-10 10:31:14.866 ERROR : An exception occurred
+Could not find file '/home/tdiuco/documents/finalPresentation/project-tsdiuco/ApexSQL/Common/QuestId.xml'.
+Type: System.IO.FileNotFoundException
+	Stack trace
+	   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+	   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+	   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+	   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+	   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+	   at System.IO.StreamReader..ctor(String path)
+	   at ApexSQL.Common.QuestID.QuestIDController.LoadToken()
+
+2021-12-10 10:31:19.221 ERROR : An exception occurred
+Could not find file '/home/tdiuco/documents/finalPresentation/project-tsdiuco/ApexSQL/Common/QuestId.xml'.
+Type: System.IO.FileNotFoundException
+	Stack trace
+	   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+	   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+	   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+	   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+	   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+	   at System.IO.StreamReader..ctor(String path)
+	   at ApexSQL.Common.QuestID.QuestIDController.LoadToken()
+
+2021-12-10 10:31:19.222 ERROR : An exception occurred
+Could not find file '/home/tdiuco/documents/finalPresentation/project-tsdiuco/ApexSQL/Common/QuestId.xml'.
+Type: System.IO.FileNotFoundException
+	Stack trace
+	   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+	   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+	   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+	   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+	   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+	   at System.IO.StreamReader..ctor(String path)
+	   at ApexSQL.Common.QuestID.QuestIDController.LoadToken()
+
+2021-12-12 14:32:21.328 INFO  [VSCPWRTOOLS: 2021.1.81.0]: OS version: Linux 4.15.0-161-generic #169-Ubuntu SMP Fri Oct 15 13:41:54 UTC 2021
+2021-12-12 14:32:21.392 INFO  [VSCPWRTOOLS: 2021.1.81.0]: Host application: Visual Studio Code(1.63.0)
+2021-12-12 14:32:21.392 INFO  [VSCPWRTOOLS: 2021.1.81.0]: Initializing addin: ApexSQL Database Power Tools for VS Code 2021.1.81.0
+2021-12-12 14:32:21.403 ERROR : An exception occurred
+Could not find file '/home/tdiuco/documents/finalPresentation/project-tsdiuco/ApexSQL/Common/QuestId.xml'.
+Type: System.IO.FileNotFoundException
+	Stack trace
+	   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+	   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+	   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+	   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+	   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+	   at System.IO.StreamReader..ctor(String path)
+	   at ApexSQL.Common.QuestID.QuestIDController.LoadToken()
+
+2021-12-12 14:32:21.403 ERROR : An exception occurred
+Could not find file '/home/tdiuco/documents/finalPresentation/project-tsdiuco/ApexSQL/Common/QuestId.xml'.
+Type: System.IO.FileNotFoundException
+	Stack trace
+	   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+	   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+	   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+	   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+	   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+	   at System.IO.StreamReader..ctor(String path)
+	   at ApexSQL.Common.QuestID.QuestIDController.LoadToken()
+
+2021-12-12 14:32:21.404 ERROR : An exception occurred
+Could not find file '/home/tdiuco/documents/finalPresentation/project-tsdiuco/ApexSQL/Common/QuestId.xml'.
+Type: System.IO.FileNotFoundException
+	Stack trace
+	   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+	   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+	   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+	   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+	   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+	   at System.IO.StreamReader..ctor(String path)
+	   at ApexSQL.Common.QuestID.QuestIDController.LoadToken()
+
+2021-12-12 14:32:21.406 ERROR : An exception occurred
+Could not find file '/home/tdiuco/documents/finalPresentation/project-tsdiuco/ApexSQL/Common/QuestId.xml'.
+Type: System.IO.FileNotFoundException
+	Stack trace
+	   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+	   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+	   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+	   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+	   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+	   at System.IO.StreamReader..ctor(String path)
+	   at ApexSQL.Common.QuestID.QuestIDController.LoadToken()
+
+2021-12-12 14:32:21.406 ERROR : An exception occurred
+Could not find file '/home/tdiuco/documents/finalPresentation/project-tsdiuco/ApexSQL/Common/QuestId.xml'.
+Type: System.IO.FileNotFoundException
+	Stack trace
+	   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+	   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+	   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+	   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+	   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+	   at System.IO.StreamReader..ctor(String path)
+	   at ApexSQL.Common.QuestID.QuestIDController.LoadToken()
+
+2021-12-12 14:32:21.407 ERROR : An exception occurred
+Could not find file '/home/tdiuco/documents/finalPresentation/project-tsdiuco/ApexSQL/Common/QuestId.xml'.
+Type: System.IO.FileNotFoundException
+	Stack trace
+	   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+	   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+	   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+	   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+	   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+	   at System.IO.StreamReader..ctor(String path)
+	   at ApexSQL.Common.QuestID.QuestIDController.LoadToken()
+
+2021-12-12 14:32:21.407 ERROR : An exception occurred
+Could not find file '/home/tdiuco/documents/finalPresentation/project-tsdiuco/ApexSQL/Common/QuestId.xml'.
+Type: System.IO.FileNotFoundException
+	Stack trace
+	   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+	   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+	   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+	   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+	   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+	   at System.IO.StreamReader..ctor(String path)
+	   at ApexSQL.Common.QuestID.QuestIDController.LoadToken()
+
+2021-12-12 14:32:21.408 ERROR : An exception occurred
+Could not find file '/home/tdiuco/documents/finalPresentation/project-tsdiuco/ApexSQL/Common/QuestId.xml'.
+Type: System.IO.FileNotFoundException
+	Stack trace
+	   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+	   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+	   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+	   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+	   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+	   at System.IO.StreamReader..ctor(String path)
+	   at ApexSQL.Common.QuestID.QuestIDController.LoadToken()
+
+2021-12-12 14:32:21.408 ERROR : An exception occurred
+Could not find file '/home/tdiuco/documents/finalPresentation/project-tsdiuco/ApexSQL/Common/QuestId.xml'.
+Type: System.IO.FileNotFoundException
+	Stack trace
+	   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+	   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+	   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+	   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+	   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+	   at System.IO.StreamReader..ctor(String path)
+	   at ApexSQL.Common.QuestID.QuestIDController.LoadToken()
+
+2021-12-12 14:32:21.425 ERROR : An exception occurred
+Could not find file '/home/tdiuco/documents/finalPresentation/project-tsdiuco/ApexSQL/Common/QuestId.xml'.
+Type: System.IO.FileNotFoundException
+	Stack trace
+	   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+	   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+	   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+	   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+	   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+	   at System.IO.StreamReader..ctor(String path)
+	   at ApexSQL.Common.QuestID.QuestIDController.LoadToken()
+
+2021-12-12 14:32:21.425 ERROR : An exception occurred
+Could not find file '/home/tdiuco/documents/finalPresentation/project-tsdiuco/ApexSQL/Common/QuestId.xml'.
+Type: System.IO.FileNotFoundException
+	Stack trace
+	   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+	   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+	   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+	   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+	   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+	   at System.IO.StreamReader..ctor(String path)
+	   at ApexSQL.Common.QuestID.QuestIDController.LoadToken()
+
+2021-12-12 15:15:03.763 ERROR : An exception occurred
+Could not find file '/home/tdiuco/documents/finalPresentation/project-tsdiuco/ApexSQL/Common/QuestId.xml'.
+Type: System.IO.FileNotFoundException
+	Stack trace
+	   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+	   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+	   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+	   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+	   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+	   at System.IO.StreamReader..ctor(String path)
+	   at ApexSQL.Common.QuestID.QuestIDController.LoadToken()
+
+2021-12-12 15:16:17.073 ERROR : An exception occurred
+Could not find file '/home/tdiuco/documents/finalPresentation/project-tsdiuco/ApexSQL/Common/QuestId.xml'.
+Type: System.IO.FileNotFoundException
+	Stack trace
+	   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+	   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+	   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+	   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+	   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+	   at System.IO.StreamReader..ctor(String path)
+	   at ApexSQL.Common.QuestID.QuestIDController.LoadToken()
+
+2021-12-12 15:16:17.074 ERROR : An exception occurred
+Could not find file '/home/tdiuco/documents/finalPresentation/project-tsdiuco/ApexSQL/Common/QuestId.xml'.
+Type: System.IO.FileNotFoundException
+	Stack trace
+	   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+	   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+	   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+	   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+	   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+	   at System.IO.StreamReader..ctor(String path)
+	   at ApexSQL.Common.QuestID.QuestIDController.LoadToken()
+
