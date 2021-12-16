@@ -21,11 +21,22 @@ def main():
       if confirmUserName(username, con):
          print("Hello, " + username)
          menuSelection = None
-         while menuSelection != '14':
+         while menuSelection != '10':
             printOptionsMenu()
-            menuSelection = input("Enter option")
-            if menuSelection == 1:
+            menuSelection = input("Enter option: ")
+            if menuSelection == '1':
                addReview(username, con)
+            elif menuSelection == '2':
+               listIngredientsOnHand(username, con)
+            elif menuSelection == '3':
+               editOnHandSpiritsList(username, con)
+            elif menuSelection == '4':
+               requestRecipe(con)
+            elif menuSelection == '5':
+               findHighestRatedRecipe(con)
+            elif menuSelection == '6':
+               findAccessableRecipies(username, con)
+
          print("See you Later!")
       else:
          print("Username Not found...restart program to try again :)")
@@ -37,27 +48,99 @@ def main():
 
 # # OLTP Functionality
 
-def addReview():
-   rs = con.cursor(buffered=True)
-   query = """ SELECT username, age
-               FROM application_user;"""
+def addReview(username, con):
+   rs = con.cursor()
+   cocktail = input("Cocktail: ")
+   if checkCocktailExists(cocktail, con):
+      rating = input("Rating: ")
+      query = """INSERT INTO review Values (%s, %s,%s);"""
+      rs.execute(query, (username, cocktail, rating))
+      # SET innodb_lock_wait_timeout = 120;
+      # This is a command that I had to enter in the mysql database command
+      # line. I don't exactly know what it does but with out it, I get error:
+      # 1205 (HY000): Lock wait timeout exceeded; try restarting transaction
+      con.commit()
+   else:
+      print("Cocktail Does Not Exist")
+   rs.close()
+
+def listIngredientsOnHand(usernameInput, con):
+   rs = con.cursor()
+   query = f'''SELECT spirit
+               FROM spirit_user_has
+               WHERE username = "{usernameInput}";'''
+   rs.execute(query)
+   print("Spirits: ")
+   for (spirit) in rs:
+      print('{}'. format(spirit))
+
+   query = f'''SELECT add_on
+               FROM add_on_user_has
+               WHERE username = "{usernameInput}";'''
+   rs.execute(query)
+   print("Add Ons: ")
+   for (add_on) in rs:
+      print('{}'. format(add_on))
+   rs.close()
+
+def editOnHandSpiritsList(username, con):
+   addOrRemove = input("Would you like to add or remove? (a/r): ")
+   rs = con.cursor()
+   if addOrRemove == 'a':
+      spiritToAdd = input("What would you like to add?: ")
+      query = f'''INSERT INTO spirit_user_has VALUE ("{username}", "{spiritToAdd}");'''
+      rs.execute(query)
+      con.commit()
+   elif addOrRemove == 'r':
+      spiritToRemove = input("What would you like to remove?: ")
+      query = f'''DELETE FROM spirit_user_has
+                  WHERE username = "{username}" AND spirit = "{spiritToRemove}";'''
+      rs.execute(query)
+      con.commit()
+   rs.close()
+
+def requestRecipe(con):
+   requestedRecipe = input("What would you like the recipe for?: ")
+   rs = con.cursor()
+   query = f'''SELECT *
+               FROM ingredient_list_spirit
+               WHERE cocktail_name = "{requestedRecipe}";'''
+   rs.execute(query)
+   print(requestedRecipe + ":")
+   for (cocktail_name, spirit, amount, amount_unit) in rs:
+      print('{} - {} {}'. format(spirit, amount, amount_unit))
+
+   query = f'''SELECT *
+               FROM ingredient_list_add_on
+               WHERE cocktail_name = "{requestedRecipe}";'''
    rs.execute(query)
 
-# def listIngredientsOnHand():
+   for (cocktail_name, add_on, amount, amount_unit) in rs:
+      print('{} - {} {}'. format(add_on, amount, amount_unit))
 
-# def editOnHandIngredientsList():
-
-# def editOnHandSpiritsList():
-
-# def requestRecipe():
-
-# def increseRecipePortion():
-
-# def findHighestRatedRecipe():
+   rs.close()
 
 # # OLAP Functionality
+def findHighestRatedRecipe(con):
+   rs = con.cursor()
+   query = f'''SELECT cocktail, AVG(userRating) AS Rating
+               FROM review
+               GROUP BY cocktail
+               HAVING AVG(userRating) >= ALL (SELECT AVG(userRating)
+                                             FROM review
+                                             GROUP BY cocktail);'''
+   rs.execute(query)
+   for (cocktail, Rating) in rs:
+      print('{} ({}/5)'. format(cocktail, Rating))
 
-# def findAccessableRecipies():
+def findAccessableRecipies(username, con):
+   rs = con.cursor()
+   query = f'''SELECT spirit
+               FROM spirit_user_has
+               WHERE username = "{username}";'''
+   rs.execute(query)
+   for (cocktail, Rating) in rs:
+      print('{} ({}/5)'. format(cocktail, Rating))
 
 # def filterCocktailRecipies():
 
@@ -70,6 +153,18 @@ def addReview():
 # def returnMostUsedIngredients(favSpirit):
 
 # Other Functions
+
+def checkCocktailExists(cocktailInput, con):
+   rs = con.cursor(buffered=True)
+   query = """ SELECT cocktail_name, abv
+               FROM cocktail_recipe;"""
+   rs.execute(query)
+   for (cocktail_name, abv) in rs:
+      if cocktail_name == cocktailInput:
+         rs.close()
+         return True
+   rs.close()
+   return False
 
 def confirmUserName(username_input, con):
    rs = con.cursor(buffered=True)
@@ -89,18 +184,14 @@ def printOptionsMenu():
    print("1. Add a Review")
    print("2. List Ingredients You Have")
    print("3. Edit Spirits You Have")
-   print("4. Edit Ingredients You Have")
-   print("5. Search For a Recipe")
-   print("6. Make Multiple Portions of a Recipe")
-   print("7. Find Highest Rated Recipe\n")
+   print("4. Search For a Recipe\n")
    print("***OLAP Transactions***")
-   print("8. Find Recipes Based on What You Have")
-   print("9. Find Recipes by Filter")
-   print("10. Find Most Common Add Ons")
-   print("11. Find Most Common Spirits")
-   print("12. Find Most Common Add OnsFrom Your Favorite Spirit")
-   print("13. Find Most Common Spirits From Your Favorite Spirit")
-   print("14. Exit")
+   print("5. Find Highest Rated Recipe")
+   print("6. Find Recipes Based on What You Have")
+   print("7. Find Recipes by Filter")
+   print("8. Find Most Common Add Ons")
+   print("9. Find Most Common Spirits")
+   print("10. Exit")
 
 if __name__ == '__main__':
    main()
