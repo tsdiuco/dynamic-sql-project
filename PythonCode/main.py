@@ -1,3 +1,8 @@
+# NAME: Trevor Diuco
+# CLASS: CPSC 321
+# Last Modified: December 16, 2021
+# DESCRIPTION: This file contains the script for the main function of the application
+
 import config
 import mysql.connector
 
