@@ -1,9 +1,5 @@
 ## Instructions for Technologies Used:
 
-1. George Washington
-   - John Adams
-     - Thomas Jefferson
-
 1. Check for access to Python3 Interpreter
      - Refer to url for detailed information about how to install/update Python Interpreter on you local machine
        - https://wiki.python.org/moin/BeginnersGuide/Download
