@@ -146,11 +146,24 @@ def findAccessableRecipies(username, con):
 
 # def returnMostUsedIngredients():
 
+def findMostComplicatedRecipes(con):
+   rs = con.cursor(buffered=True)
+   query = """ SELECT a.cocktail_name, SUM(a.num) AS number_of_ingredients
+               FROM ((SELECT cocktail_name, count(*) AS num
+                      FROM ingredient_list_spirit
+                     GROUP BY cocktail_name)
+                    UNION
+                    (SELECT cocktail_name, count(*) AS num
+                     FROM ingredient_list_add_on
+                     GROUP BY cocktail_name)) AS a
+               GROUP BY a.cocktail_name
+               ORDER BY number_of_ingredients DESC, a.cocktail_name;"""
+   rs.execute(query)
+   for (cocktail_name, number_of_ingredients) in rs:
+      print('{}: {}'. format(cocktail_name, number_of_ingredients))
+   rs.close()
+
 # def returnMostUsedSpirits():
-
-# def returnMostUsedIngredients(favSpirit):
-
-# def returnMostUsedIngredients(favSpirit):
 
 # Other Functions
 
@@ -187,9 +200,9 @@ def printOptionsMenu():
    print("4. Search For a Recipe\n")
    print("***OLAP Transactions***")
    print("5. Find Highest Rated Recipe")
-   print("6. Find Recipes Based on What You Have")
-   print("7. Find Recipes by Filter")
-   print("8. Find Most Common Add Ons")
+   print("6. Find Recipies with the Most Ingredients")
+   print("7. Find Recipes Based on What You Have")
+   print("8. Find Recipes by Filter")
    print("9. Find Most Common Spirits")
    print("10. Exit")
 
