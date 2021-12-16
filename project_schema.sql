@@ -82,9 +82,8 @@ CREATE TABLE ingredient_list_add_on(
 CREATE TABLE review(
    username          VARCHAR(20),
    cocktail          VARCHAR(50),
-   ratingDate        DATE,
-   userRating        INT(1) NOT NULL,
-   PRIMARY KEY (username, cocktail, ratingDate),
+   userRating        INT(1),
+   PRIMARY KEY (username, cocktail, userRating),
    FOREIGN KEY (username) REFERENCES application_user(username) ON DELETE CASCADE,
    FOREIGN KEY (cocktail) REFERENCES cocktail_recipe(cocktail_name),
    CHECK (userRating <= 5 AND userRating >= 0)
@@ -333,15 +332,15 @@ VALUES ('Strawberry Daiquiri',         'Strawberries', 5, 'crushed'),
 
 
 INSERT INTO review
-VALUES ('tsdiuco',    'Dark and Stormy',      "2021-07-31", 5),
-       ('tsdiuco',    'Long Island Iced Tea', "2021-09-25", 4),
-       ('tsdiuco',    'Tequila Shot',         "2021-10-12", 2),
-       ('ecgustin',   'Tequila shot',         "2021-10-12", 5),
-       ('ecgustin',   'Long Island Iced Tea', "2020-05-09", 5),
-       ('ecgustin',   'Old Fashioned',        "2019-12-24", 3),
-       ('awcalmette', 'Dark and Stormy',      "2021-07-31", 3),
-       ('awcalmette', 'Kamikaze',             "2020-04-29", 5),
-       ('awcalmette', 'Strawberry Daiquiri',  "2020-09-13", 5),
-       ('dmkar',      'Gin Gimlet',           "2021-10-12", 2),
-       ('dmkar',      'Mai Tai',              "2019-12-31", 5),
-       ('dmkar',      'Old Fashioned',        "2021-11-10", 1);
+VALUES ('tsdiuco',    'Dark and Stormy', 5),
+       ('tsdiuco',    'Long Island Iced Tea', 4),
+       ('tsdiuco',    'Tequila Shot', 2),
+       ('ecgustin',   'Tequila shot', 5),
+       ('ecgustin',   'Long Island Iced Tea', 5),
+       ('ecgustin',   'Old Fashioned', 3),
+       ('awcalmette', 'Dark and Stormy', 3),
+       ('awcalmette', 'Kamikaze', 5),
+       ('awcalmette', 'Strawberry Daiquiri', 5),
+       ('dmkar',      'Gin Gimlet', 2),
+       ('dmkar',      'Mai Tai', 5),
+       ('dmkar',      'Old Fashioned', 1);

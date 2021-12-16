@@ -19,9 +19,16 @@ def main():
       print("*** Welcome to Cocktail Creator ***")
       username = input("Please Enter Your User Name: ")
       if confirmUserName(username, con):
-         print("Thank You")
+         print("Hello, " + username)
+         menuSelection = None
+         while menuSelection != '14':
+            printOptionsMenu()
+            menuSelection = input("Enter option")
+            if menuSelection == 1:
+               addReview(username, con)
+         print("See you Later!")
       else:
-         print("Not a username")
+         print("Username Not found...restart program to try again :)")
 
       con.close()
 
@@ -30,11 +37,11 @@ def main():
 
 # # OLTP Functionality
 
-# def addUser():
-
-# def removeUser():
-
-# def addReview():
+def addReview():
+   rs = con.cursor(buffered=True)
+   query = """ SELECT username, age
+               FROM application_user;"""
+   rs.execute(query)
 
 # def listIngredientsOnHand():
 
@@ -66,34 +73,34 @@ def main():
 
 def confirmUserName(username_input, con):
    rs = con.cursor(buffered=True)
-   query = """ SELECT username
+   query = """ SELECT username, age
                FROM application_user;"""
    rs.execute(query)
-   for (username) in rs:
+   for (username, age) in rs:
       if username == username_input:
          rs.close()
          return True
    rs.close()
    return False
 
-def printWelcomePrompt():
+def printOptionsMenu():
+   print("\n")
    print("***OLTP Transactions***")
-   print("1. Add a User")
-   print("2. Remove a User")
-   print("3. Add a Review")
-   print("4. List Ingredients You Have")
-   print("5. Edit Spirits You Have")
-   print("6. Edit Ingredients You Have")
-   print("7. Search For a Recipe")
-   print("8. Make Multiple Portions of a Recipe")
-   print("9. Find Highest Rated Recipe\n")
+   print("1. Add a Review")
+   print("2. List Ingredients You Have")
+   print("3. Edit Spirits You Have")
+   print("4. Edit Ingredients You Have")
+   print("5. Search For a Recipe")
+   print("6. Make Multiple Portions of a Recipe")
+   print("7. Find Highest Rated Recipe\n")
    print("***OLAP Transactions***")
-   print("10. Find Recipes Based on What You Have")
-   print("11. Find Recipes by Filter")
-   print("12. Find Most Common Add Ons")
-   print("13. Find Most Common Spirits")
-   print("14. Find Most Common Add OnsFrom Your Favorite Spirit")
-   print("15. Find Most Common Spirits From Your Favorite Spirit")
+   print("8. Find Recipes Based on What You Have")
+   print("9. Find Recipes by Filter")
+   print("10. Find Most Common Add Ons")
+   print("11. Find Most Common Spirits")
+   print("12. Find Most Common Add OnsFrom Your Favorite Spirit")
+   print("13. Find Most Common Spirits From Your Favorite Spirit")
+   print("14. Exit")
 
 if __name__ == '__main__':
    main()
