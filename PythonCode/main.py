@@ -35,7 +35,13 @@ def main():
             elif menuSelection == '5':
                findHighestRatedRecipe(con)
             elif menuSelection == '6':
+               findMostComplicatedRecipes(con)
+            elif menuSelection == '7':
                findAccessableRecipies(username, con)
+            elif menuSelection == '8':
+               filterCocktailRecipies(con)
+            elif menuSelection == '9':
+               returnMostUsedSpirits(con)
 
          print("See you Later!")
       else:
@@ -52,7 +58,7 @@ def addReview(username, con):
    rs = con.cursor()
    cocktail = input("Cocktail: ")
    if checkCocktailExists(cocktail, con):
-      rating = input("Rating: ")
+      rating = input("Rating(0-5): ")
       query = """INSERT INTO review Values (%s, %s,%s);"""
       rs.execute(query, (username, cocktail, rating))
       # SET innodb_lock_wait_timeout = 120;
@@ -65,7 +71,7 @@ def addReview(username, con):
    rs.close()
 
 def listIngredientsOnHand(usernameInput, con):
-   rs = con.cursor()
+   rs = con.cursor(buffered=True)
    query = f'''SELECT spirit
                FROM spirit_user_has
                WHERE username = "{usernameInput}";'''
@@ -135,16 +141,55 @@ def findHighestRatedRecipe(con):
 
 def findAccessableRecipies(username, con):
    rs = con.cursor()
-   query = f'''SELECT spirit
-               FROM spirit_user_has
-               WHERE username = "{username}";'''
+   query = f'''SELECT a.cocktail_name, TRUNCATE(SUM(sub_sum)/c.number_of_ingredients, 2) AS percentageOfRecipe
+               FROM (((SELECT cocktail_name, count(*) as sub_sum
+                       FROM ingredient_list_spirit ils JOIN spirit_user_has suh USING (spirit)
+                       WHERE suh.username = "{username}"
+                       GROUP BY cocktail_name)
+                       UNION
+                      (SELECT cocktail_name, count(*) as sub_sum
+                       FROM ingredient_list_add_on ils JOIN add_on_user_has suh USING (add_on)
+                       WHERE suh.username = "{username}"
+                       GROUP BY cocktail_name)) AS a) JOIN
+                     (SELECT a.cocktail_name, SUM(a.num) AS number_of_ingredients
+                      FROM ((SELECT cocktail_name, count(*) AS num
+                             FROM ingredient_list_spirit
+                             GROUP BY cocktail_name)
+                     UNION
+                     (SELECT cocktail_name, count(*) AS num
+                      FROM ingredient_list_add_on
+                      GROUP BY cocktail_name)) AS a
+                     GROUP BY a.cocktail_name) AS c USING (cocktail_name)
+               GROUP BY a.cocktail_name
+               ORDER BY percentageOfRecipe DESC, cocktail_name
+               LIMIT 5;'''
    rs.execute(query)
-   for (cocktail, Rating) in rs:
-      print('{} ({}/5)'. format(cocktail, Rating))
+   for (cocktail_name, percentageOfRecipe) in rs:
+      print('{}: {}%'. format(cocktail_name, percentageOfRecipe * 100))
+   rs.close()
 
-# def filterCocktailRecipies():
+def filterCocktailRecipies(con):
+   mainSpirit = input("What would you like as the main spirit?: ")
+   maxAbv = input("What would you like as the max ABV?: ")
+   minAbv = input("What would you like as the min ABV?: ")
+   minRating = input("What is the minimum rating? (Includes Recipies with 0 Ratings): ")
 
-# def returnMostUsedIngredients():
+   rs = con.cursor(buffered=True)
+   query = f'''SELECT cr.cocktail_name, cr.abv, TRUNCATE(r.avg_rating, 2)
+               FROM cocktail_recipe cr LEFT OUTER JOIN
+                     (SELECT cocktail, AVG(userRating) AS avg_rating
+                     FROM review
+                     GROUP BY cocktail) AS r ON (cr.cocktail_name = r.cocktail)
+               WHERE cr.abv <= {maxAbv} AND
+                     cr.abv >= {minAbv} AND
+                     (r.avg_rating >= {minRating} OR r.avg_rating IS NULL) AND
+                     cr.main_spirit = "{mainSpirit}"
+               ORDER BY r.avg_rating DESC, cr.abv DESC;'''
+   rs.execute(query)
+
+   for (cocktail_name, abv, avg_rating) in rs:
+      print('{}, ABV: {}%, Rating: {}/5'.format(cocktail_name, abv, avg_rating))
+   rs.close()
 
 def findMostComplicatedRecipes(con):
    rs = con.cursor(buffered=True)
@@ -157,13 +202,24 @@ def findMostComplicatedRecipes(con):
                      FROM ingredient_list_add_on
                      GROUP BY cocktail_name)) AS a
                GROUP BY a.cocktail_name
-               ORDER BY number_of_ingredients DESC, a.cocktail_name;"""
+               ORDER BY number_of_ingredients DESC, a.cocktail_name
+               LIMIT 7;"""
    rs.execute(query)
    for (cocktail_name, number_of_ingredients) in rs:
       print('{}: {}'. format(cocktail_name, number_of_ingredients))
    rs.close()
 
-# def returnMostUsedSpirits():
+def returnMostUsedSpirits(con):
+   rs = con.cursor(buffered=True)
+   query = """ SELECT spirit, COUNT(*)
+               FROM ingredient_list_spirit
+               GROUP BY spirit
+               ORDER BY COUNT(*) DESC
+               LIMIT 5;"""
+   rs.execute(query)
+   for (spirit, count) in rs:
+      print('{} is used in {} different recipes'. format(spirit, count))
+   rs.close()
 
 # Other Functions
 
